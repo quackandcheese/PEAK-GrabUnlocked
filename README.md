@@ -1,31 +1,16 @@
-# GrabUnlocked
+# Grab Unlocked
 
 You can now pull/grab your friends from any direction, climbing, standing, or in the air! Fully configurable.
 
-## Template Instructions
+## Information
 
-You can remove this section after you've set up your project.
+Players no longer have to be climbing to be pulled. Players can be pulled even if they are higher than the one trying to pull them.
 
-Next steps:
+These fields are configurable:
+- Maximum grab distance
+- Whether or not you can grab from any height
+- Whether or not you can grab even when players are not climbing
 
-- Create a copy of the `Config.Build.user.props.template` file and name it `Config.Build.user.props`
-  - This will automate copying your plugin assembly to `BepInEx/plugins/`
-  - Configure the paths to point to your game path and your `BepInEx/plugins/`
-  - Game assembly references should work if the path to the game is valid
-- Search `TODO` in the whole project to see what you should configure or modify
+## Credits
 
-### Thunderstore Packaging
-
-This template comes with Thunderstore packaging built-in, using [TCLI](<https://github.com/thunderstore-io/thunderstore-cli>).
-
-You can build Thunderstore packages by running:
-
-```sh
-dotnet build -c Release -target:PackTS -v d
-```
-
-> [!NOTE]  
-> You can learn about different build options with `dotnet build --help`.  
-> `-c` is short for `--configuration` and `-v d` is `--verbosity detailed`.
-
-The built package will be found at `artifacts/thunderstore/`.
+- [Hamunii](https://github.com/hamunii) for the [PEAK modding template](https://github.com/PEAKModding/BepInExTemplate), [MonoDetour](https://github.com/MonoDetour/MonoDetour), the [IL hooking guide](https://monodetour.github.io/ilhooking/introduction/), and for all the help while I was learning to make IL hooks!

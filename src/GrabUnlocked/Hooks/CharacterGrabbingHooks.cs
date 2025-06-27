@@ -30,8 +30,8 @@ static class GameHandlerHooks
         // Change the maximum grab distance to the value set in the config
         weaver
             .MatchRelaxed(
-                x => x.MatchLdloc(2) && weaver.SetCurrentTo(x),
-                x => x.MatchLdcR4(4f),
+                x => x.MatchLdloc(2),
+                x => x.MatchLdcR4(4f) && weaver.SetCurrentTo(x),
                 x => x.MatchBgt(out _)
             )
             .ThrowIfFailure()
@@ -74,5 +74,7 @@ static class GameHandlerHooks
                .ThrowIfFailure()
                .InsertBefore(firstMatch, weaver.Create(OpCodes.Br, lastMatch.Next));
         }
+
+        Plugin.Log.LogInfo(info.ToString());
     }
 }

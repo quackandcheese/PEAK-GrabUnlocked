@@ -16,7 +16,7 @@ public partial class Plugin : BaseUnityPlugin
     private void Awake()
     {
         Log = Logger;
-
+        
         MaxGrabDistance = Config.Bind("General", "MaxGrabDistance", 4f, "How far away you can initiate a friend grab from.").Value;
         CanGrabFromAnyHeight = Config.Bind("General", "CanGrabFromAnyHeight", true, "If true, you can initiate a friend grab whether or not you are higher up than the friend.").Value;
         CanGrabWhenNotClimbing = Config.Bind("General", "CanGrabWhenNotClimbing", true, "If true, you can initiate a friend grab even when the friend is not climbing (ie. mid-air, on the ground, etc.)").Value;
